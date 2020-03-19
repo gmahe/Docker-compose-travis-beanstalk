@@ -4,7 +4,7 @@ services:
 before_install:
   - docker build -t gmahe/docker-react -f Dockerfile.dev .
 script:
-  - docker run -e CI=true gmahe/docker-react npm run test -- --coverage
+  - docker run -e CI=true gmahe/docker-react npm run test
 deploy:
   provider: elasticbeanstalk
   region: "eu-west-2"
